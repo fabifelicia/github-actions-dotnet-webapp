@@ -18,10 +18,10 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '8.0.x' # Ajuste para a versão do .NET usada no projeto
+        dotnet-version: '8.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore **/*.csproj 
 
     - name: Build project
-      run: dotnet build --configuration Release
+      run: dotnet build **/*.csproj --no-restore
