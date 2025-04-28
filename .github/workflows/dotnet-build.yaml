@@ -1,6 +1,9 @@
 name: Build .NET Project
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: "0 * * * *" # Executa a cada hora
 
